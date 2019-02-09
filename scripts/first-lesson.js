@@ -1,4 +1,6 @@
 const stream$ = rxjs.Observable.create(observer => {
+	console.log('stream was created');
+	
 	observer.next("one");
 
 	setTimeout(() => {
@@ -16,6 +18,8 @@ const stream$ = rxjs.Observable.create(observer => {
 	observer.next('two');
 });
 
+/*
 stream$.subscribe(data => {
 	console.log(`Subscribe: ${data}`);
 });
+*/
