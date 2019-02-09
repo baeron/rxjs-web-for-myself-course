@@ -1,24 +1,31 @@
 const stream$ = rxjs.Observable.create(observer => {
-	
-	observer.next("one");
+  observer.next("one");
 
-	setTimeout(() => {
+  setTimeout(() => {
 		observer.next('After 5 seconds');
-	}, 5000);
+    // observer.error("Somthing went wrong");
+  }, 5000);
 
-	setTimeout(() => {
-		console.log('stream was compleated');
-		observer.complete();
-	}, 3000);
+  setTimeout(() => {
+    observer.next('After 3 seconds');
+    // observer.complete();
+  }, 3000);
 
-	setTimeout(() => {
-		observer.next('After 2 seconds');
-	}, 2000);
+  setTimeout(() => {
+    observer.next("After 2 seconds");
+  }, 2000);
 
-	observer.next('two');
+  observer.next("two");
 });
 
+stream$.subscribe();
 
 stream$.subscribe(data => {
-	console.log(`Subscribe: ${data}`);
+  console.log(`Subscribe: ${data}`),
+    error => {
+      console.log(error);
+    },
+    () => {
+      console.log("Compleated from subscriber");
+    };
 });
