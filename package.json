@@ -1,0 +1,22 @@
+{
+  "name": "rxjs-web-for-myself-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baeron/rxjs-web-for-myself-course.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baeron/rxjs-web-for-myself-course/issues"
+  },
+  "homepage": "https://github.com/baeron/rxjs-web-for-myself-course#readme",
+  "dependencies": {
+    "rxjs": "^6.4.0"
+  }
+}
